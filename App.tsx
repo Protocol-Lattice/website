@@ -4,7 +4,6 @@ import { ThemeProvider } from './contexts/ThemeProvider';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
-import WritingPage from './pages/WritingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { CommandPalette } from './components/ui/CommandPalette';
@@ -30,7 +29,6 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/writing" element={<WritingPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>

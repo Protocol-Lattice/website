@@ -4,23 +4,13 @@ type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   logo: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        {/* Outer hexagon */}
-        <path d="M12 2.5 L19.5 7 L19.5 17 L12 21.5 L4.5 17 L4.5 7 Z"/>
-        
-        {/* Inner star/node structure */}
-        <path d="M12 2.5 L12 8"/>
-        <path d="M4.5 7 L10 9.5"/>
-        <path d="M4.5 17 L10 14.5"/>
-        <path d="M12 21.5 L12 16"/>
-        <path d="M19.5 17 L14 14.5"/>
-        <path d="M19.5 7 L14 9.5"/>
-
-        {/* Center connections */}
-        <path d="M10 9.5 L14 9.5 L12 8 Z"/>
-        <path d="M10 14.5 L14 14.5 L12 16 Z"/>
-        <path d="M10 9.5 L10 14.5"/>
-        <path d="M14 9.5 L14 14.5"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 7l10 5 10-5"/>
+        <path d="M12 22V12"/>
+        <path d="M22 7v10"/>
+        <path d="M2 7v10"/>
     </svg>
   ),
   sun: (props: IconProps) => (

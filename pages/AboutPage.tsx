@@ -10,7 +10,7 @@ function AboutPage() {
     return (
         <div className="container mx-auto max-w-3xl px-4 py-16 sm:py-24">
             <div className="text-center">
-                <Icons.logo className="mx-auto h-16 w-16" />
+                <Icons.logo className="mx-auto h-16 w-16 text-muted-foreground" />
                 <h1 className="mt-4 text-4xl font-extrabold tracking-tight">{COMPANY_INFO.name}</h1>
                 <p className="mt-4 text-xl text-muted-foreground">{COMPANY_INFO.shortPitch}</p>
             </div>
