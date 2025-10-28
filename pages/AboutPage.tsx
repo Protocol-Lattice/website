@@ -2,7 +2,6 @@
 import React from 'react';
 import { COMPANY_INFO, TECHNOLOGIES, FAQS } from '../constants';
 import Badge from '../components/ui/Badge';
-import { Icons } from '../components/Icons';
 
 function AboutPage() {
     const ossPhilosophy = FAQS.find(faq => faq.question === "What is your open-source philosophy?");
@@ -10,7 +9,7 @@ function AboutPage() {
     return (
         <div className="container mx-auto max-w-3xl px-4 py-16 sm:py-24">
             <div className="text-center">
-                <Icons.logo className="mx-auto h-16 w-16 text-muted-foreground" />
+                <img src="/logo.svg" alt="Protocol Lattice Logo" className="mx-auto h-16 w-16" />
                 <h1 className="mt-4 text-4xl font-extrabold tracking-tight">{COMPANY_INFO.name}</h1>
                 <p className="mt-4 text-xl text-muted-foreground">{COMPANY_INFO.shortPitch}</p>
             </div>

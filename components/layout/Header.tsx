@@ -13,7 +13,7 @@ function Header() {
         <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur-sm">
             <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
                 <a href="/#" className="flex items-center space-x-3">
-                    <Icons.logo className="h-6 w-6" />
+                    <img src="/logo.svg" alt="Protocol Lattice Logo" className="h-6 w-6" />
                     <span className="font-bold">{COMPANY_INFO.name}</span>
                 </a>
                 <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
