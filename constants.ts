@@ -134,6 +134,7 @@ export const WRITING_POSTS = [
 
 export const NAV_ITEMS: NavItem[] = [
     { href: '#/projects', label: 'Projects' },
+    { href: '#/writing', label: 'Research' },
     { href: '#/about', label: 'About' },
     { href: '#/contact', label: 'Contact' },
 ]
