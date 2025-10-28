@@ -1,8 +1,10 @@
 
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import { PROJECTS, COMPANY_INFO, FAQS } from '../constants';
+import { PROJECTS, COMPANY_INFO, FAQS, COLLABORATIONS } from '../constants';
 import Button from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Icons } from '../components/Icons';
 
 function HomePage() {
   const featuredProjects = PROJECTS.filter(p => p.isFeatured);
@@ -34,6 +36,30 @@ function HomePage() {
           {featuredProjects.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
+        </div>
+      </section>
+      
+      {/* Collaborations Section */}
+      <section className="mt-24 sm:mt-32">
+        <h2 className="text-center text-3xl font-bold tracking-tight">Key Collaborations</h2>
+        <div className="mx-auto mt-12 max-w-3xl">
+            {COLLABORATIONS.map(collab => {
+                const Icon = Icons[collab.icon as keyof typeof Icons];
+                return (
+                    <a href={collab.href} target="_blank" rel="noopener noreferrer" key={collab.name} className="block group">
+                        <Card>
+                            <div className="p-6 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+                                {Icon && <Icon className="h-12 w-12 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0" />}
+                                <div className="flex-grow">
+                                    <h3 className="text-xl font-bold font-mono">{collab.name}</h3>
+                                    <p className="mt-2 text-muted-foreground">{collab.description}</p>
+                                </div>
+                                <Icons.externalLink className="h-5 w-5 text-muted-foreground ml-auto hidden sm:block flex-shrink-0 self-start group-hover:text-accent transition-colors" />
+                            </div>
+                        </Card>
+                    </a>
+                );
+            })}
         </div>
       </section>
 

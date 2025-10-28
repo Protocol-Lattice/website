@@ -20,3 +20,10 @@ export interface NavItem {
     href: string;
     label: string;
 }
+
+export interface Collaboration {
+    name: string;
+    description: string;
+    href: string;
+    icon: string;
+}

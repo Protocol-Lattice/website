@@ -8,6 +8,7 @@ import WritingPage from './pages/WritingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { CommandPalette } from './components/ui/CommandPalette';
+import ArticlePage from './pages/ArticlePage';
 
 // A helper component to scroll to top on route change
 function ScrollToTop() {
@@ -31,6 +32,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/writing" element={<WritingPage />} />
+              <Route path="/writing/:slug" element={<ArticlePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>

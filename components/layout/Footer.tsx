@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { SOCIAL_LINKS, COMPANY_INFO } from '../../constants';
 import { Icons } from '../Icons';
@@ -13,6 +12,9 @@ function Footer() {
                 <div className="flex items-center space-x-4">
                     <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground transition-colors hover:text-foreground">
                         <Icons.github className="h-5 w-5" />
+                    </a>
+                    <a href={SOCIAL_LINKS.utcpWebsite} target="_blank" rel="noopener noreferrer" aria-label="Universal Tool Calling Protocol" className="text-muted-foreground transition-colors hover:text-foreground">
+                        <Icons.utcp className="h-5 w-5" />
                     </a>
                 </div>
             </div>

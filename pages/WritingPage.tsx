@@ -16,19 +16,19 @@ function WritingPage() {
 
             <div className="mt-16 space-y-12">
                 {WRITING_POSTS.map(post => (
-                    <article key={post.slug} className="group relative">
+                    <a key={post.slug} href={`#/writing/${post.slug}`} className="group relative block cursor-pointer">
                         <div className="absolute -inset-2.5 rounded-lg bg-secondary opacity-0 transition group-hover:opacity-100"></div>
-                        <div className="relative">
+                        <article className="relative">
                             <p className="text-sm text-muted-foreground">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                            <h2 className="mt-2 text-2xl font-bold tracking-tight">
+                            <h2 className="mt-2 text-2xl font-bold tracking-tight transition-colors group-hover:text-accent">
                                 {post.title}
                             </h2>
                             <p className="mt-4 text-muted-foreground">{post.description}</p>
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {post.tags.map(tag => <Badge key={tag}>{tag}</Badge>)}
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
                 ))}
             </div>
              <div className="mt-16 text-center">
