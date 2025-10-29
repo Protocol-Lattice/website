@@ -32,12 +32,23 @@ function HomePage() {
       {/* Featured Projects Section */}
       <section className="mt-24 sm:mt-32">
         <h2 className="text-center text-3xl font-bold tracking-tight">Core Infrastructure</h2>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.name} project={project} />
-          ))}
-        </div>
+
+<div
+  className="
+    mt-12
+    mx-auto max-w-6xl px-4
+    grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3
+    justify-items-center
+    [&>*:only-child]:md:col-start-2
+    [&>*:only-child]:lg:col-start-2
+  "
+>
+  {featuredProjects.map((project) => (
+    <ProjectCard key={project.name} project={project} />
+  ))}
+</div>
       </section>
+
       
       {/* Collaborations Section */}
       <section className="mt-24 sm:mt-32">
