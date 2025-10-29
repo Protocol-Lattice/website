@@ -44,13 +44,13 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    name: 'lattice-agent',
-    displayName: 'lattice-agent',
+    name: 'go-agent',
+    displayName: 'go-agent',
     description: 'An agent framework for Go with graph-aware memory, UTCP-native tools, and multi-agent orchestration. Built for production.',
-    repoUrl: 'https://github.com/protocol-lattice/agent',
+    repoUrl: 'https://github.com/protocol-lattice/go-agent',
     tags: ['Go', 'Agents', 'AI', 'Infra'],
     isFeatured: true,
-    quickstart: 'go get github.com/protocol-lattice/lattice-agent',
+    quickstart: 'go get github.com/protocol-lattice/go-agent',
      content: {
       problem: 'Building sophisticated AI agents in Go requires integrating multiple complex components: memory, tool use, and agent-to-agent communication. Existing frameworks are often too simplistic or not production-ready.',
       solution: 'lattice-agent is a comprehensive framework that provides production-grade building blocks for agentic systems. It features a unique graph-aware memory system and native support for UTCP, enabling developers to build powerful, scalable multi-agent applications.',
