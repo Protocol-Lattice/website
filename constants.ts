@@ -47,7 +47,7 @@ export const PROJECTS: Project[] = [
     name: 'lattice-agent',
     displayName: 'lattice-agent',
     description: 'An agent framework for Go with graph-aware memory, UTCP-native tools, and multi-agent orchestration. Built for production.',
-    repoUrl: 'https://github.com/protocol-lattice/lattice-agent',
+    repoUrl: 'https://github.com/protocol-lattice/agent',
     tags: ['Go', 'Agents', 'AI', 'Infra'],
     isFeatured: true,
     quickstart: 'go get github.com/protocol-lattice/lattice-agent',
