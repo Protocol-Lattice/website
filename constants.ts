@@ -56,10 +56,6 @@ export const COLLABORATIONS: Collaboration[] = [
 
 export const FAQS = [
     {
-        question: "What technologies do you build with?",
-        answer: "Our core stack includes Go, UTCP, Qdrant/pgvector for memory. We believe in using the right tool for the job, with a focus on performance and stability."
-    },
-    {
         question: "What is your open-source philosophy?",
         answer: "Build practical, well-documented tools and protocols that solve real problems. We focus on clean APIs, long-term maintainability, and fostering community collaboration."
     }
