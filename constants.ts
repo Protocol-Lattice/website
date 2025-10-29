@@ -56,12 +56,8 @@ export const COLLABORATIONS: Collaboration[] = [
 
 export const FAQS = [
     {
-        question: "Do you offer enterprise support or consulting?",
-        answer: "Yes, we offer enterprise support contracts for our open-source projects and provide consulting services for agent architecture, UTCP integration, and performance optimization."
-    },
-    {
         question: "What technologies do you build with?",
-        answer: "Our core stack includes Go, UTCP, Qdrant/pgvector for memory, gRPC, and GraphQL. We believe in using the right tool for the job, with a focus on performance and stability."
+        answer: "Our core stack includes Go, UTCP, Qdrant/pgvector for memory. We believe in using the right tool for the job, with a focus on performance and stability."
     },
     {
         question: "What is your open-source philosophy?",
