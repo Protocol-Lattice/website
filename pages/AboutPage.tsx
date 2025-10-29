@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { COMPANY_INFO, TECHNOLOGIES, FAQS } from '../constants';
+import { COMPANY_INFO, FAQS } from '../constants';
 import Badge from '../components/ui/Badge';
 import { Icons } from '../components/Icons';
 
@@ -26,16 +26,9 @@ function AboutPage() {
                     </>
                 )}
 
-                <h2 className="mt-12 text-2xl font-bold">Core Technologies</h2>
-                <div className="flex flex-wrap gap-2">
-                    {TECHNOLOGIES.map(skill => (
-                        <Badge key={skill} variant="secondary" className="text-sm">{skill}</Badge>
-                    ))}
-                </div>
-
                 <h2 className="mt-12 text-2xl font-bold">Partnerships & Collaboration</h2>
                 <p>
-                    We believe in the power of open collaboration to build the future of AI. We partner with organizations and researchers to advance the development and adoption of open standards. If you are building on our protocols or are interested in a strategic partnership, please get in touch.
+                    We believe in the power of open collaboration to build the future of AI. We partner with organizations. If you are building on our protocols or are interested in a strategic partnership, please get in touch.
                 </p>
             </div>
         </div>

@@ -259,4 +259,3 @@ export const NAV_ITEMS: NavItem[] = [
     { href: '#/contact', label: 'Contact' },
 ]
 
-export const TECHNOLOGIES = ['Go (Golang)', 'gRPC', 'GraphQL', 'PostgreSQL', 'Docker', 'Kubernetes', 'Prometheus', 'Vector Databases (Qdrant, pgvector)', 'Protocols', 'Distributed Systems'];
