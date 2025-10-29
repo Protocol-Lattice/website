@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
 export const COLLABORATIONS: Collaboration[] = [
   {
     name: 'Universal Tool Calling Protocol',
-    description: 'We are proud stewards and core contributors to UTCP.',
+    description: 'We are proud stewards and core contributors to UTCP. UTCP is a lightweight, secure, and scalable standard that enables AI agents and applications to discover and call tools directly using their native protocols ',
     href: 'https://utcp.io',
     icon: 'utcp'
   }
