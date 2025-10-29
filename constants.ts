@@ -10,7 +10,7 @@ export const COMPANY_INFO = {
   handle: 'ProtocolLattice',
   email: 'kmosc@protonmail.com',
   shortPitch: 'Weaving the fabric of intelligent systems.',
-  longBio: 'Protocol Lattice is a research collective dedicated to designing and implementing open standards for AI interaction, tooling, and memory. We build interconnected, protocol-first infrastructure to ensure interoperability and advance the frontier of autonomous systems.',
+  longBio: 'Protocol Lattice is a GitHub organization building the open-source go-agent framework and companion tooling for interoperable, production-ready AI agents',
   heroTitle: 'Weaving the Fabric of AI.',
   heroSubtitle: 'We build the open-source protocols and frameworks that enable interoperable, intelligent systems.',
   availability: 'Open to collaboration and strategic partnerships.',
