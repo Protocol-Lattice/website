@@ -24,26 +24,6 @@ export const SOCIAL_LINKS = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'go-utcp',
-    description: 'The official Go implementation of UTCP, maintained by Protocol Lattice. Define and call tools directly over native channels without wrapper servers.',
-    repoUrl: 'https://github.com/universal-tool-calling-protocol/go-utcp',
-    websiteUrl: SOCIAL_LINKS.utcpWebsite,
-    tags: ['Go', 'Protocols', 'UTCP', 'AI'],
-    isFeatured: true,
-    quickstart: 'go get github.com/universal-tool-calling-protocol/go-utcp',
-    content: {
-      problem: 'Calling functions or tools across different services and languages for AI agents often requires complex boilerplate, custom servers, and brittle integrations.',
-      solution: 'go-utcp provides a native Go implementation of the UTCP standard. It allows tools to be defined once and called seamlessly over any transport that supports channels, eliminating the need for intermediary HTTP/gRPC servers for tool execution.',
-      features: [
-        'Schema-first tool definition',
-        'Transport-agnostic communication',
-        'Type-safe function calls',
-        'Minimal performance overhead',
-        'Official implementation of the UTCP standard',
-      ],
-    },
-  },
-  {
     name: 'go-agent',
     displayName: 'go-agent',
     description: 'An agent framework for Go with graph-aware memory, UTCP-native tools, and multi-agent orchestration. Built for production.',
@@ -60,25 +40,6 @@ export const PROJECTS: Project[] = [
         'Multi-agent orchestration and communication patterns',
         'Designed for high performance and scalability',
         'Pluggable architecture for custom components',
-      ],
-    },
-  },
-  {
-    name: 'Thunder',
-    description: 'Minimalist Go backend framework that turns gRPC services into REST and GraphQL APIs with near-zero friction.',
-    repoUrl: 'https://github.com/protocol-lattice/thunder',
-    tags: ['Go', 'Infra', 'gRPC', 'GraphQL'],
-    isFeatured: true,
-    quickstart: 'go get github.com/protocol-lattice/thunder',
-     content: {
-      problem: 'Exposing a single gRPC service via multiple API paradigms (like REST and GraphQL) typically involves writing and maintaining separate, redundant gateway layers, increasing complexity and development time.',
-      solution: 'Thunder is a lightweight framework that automatically generates REST and GraphQL endpoints from your existing gRPC service definitions. It acts as a smart proxy, reducing boilerplate and ensuring consistency across all your APIs.',
-      features: [
-        'Automatic gRPC to REST/GraphQL conversion',
-        'Near-zero configuration setup',
-        'High-performance reverse proxy',
-        'Extensible with custom middleware',
-        'Simplifies backend architecture significantly',
       ],
     },
   },
