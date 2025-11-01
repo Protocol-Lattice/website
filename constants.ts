@@ -43,6 +43,25 @@ export const PROJECTS: Project[] = [
       ],
     },
   },
+  {
+    name: 'lattice-code',
+    displayName: 'lattice-code',
+    description: 'A TUI-based AI code generation assistant built on `go-agent`. Features file system awareness, UTCP tool integration, and an interactive chat interface.',
+    repoUrl: 'https://github.com/Protocol-Lattice/lattice-code',
+    tags: ['Go', 'AI', 'Agents', 'CLI', 'TUI'],
+    isFeatured: true,
+    quickstart: 'git clone https://github.com/Protocol-Lattice/lattice-code.git',
+    content: {
+      problem: 'Generating code with AI often happens in a web UI, disconnected from the local development environment. This makes it hard to work with local files, run tests, or integrate with local build tools.',
+      solution: '`lattice-code` is a terminal-based AI coding assistant that runs locally. It has direct access to your file system, allowing it to read, write, and understand the context of your project. It uses UTCP to discover and call local or remote tools, making it a powerful and extensible development partner.',
+      features: [
+        'Interactive TUI chat interface',
+        'Local file system access for reading and writing code',
+        'UTCP-native for extensible tool use',
+        'Built on the `go-agent` framework',
+      ],
+    },
+  },
 ];
 
 export const COLLABORATIONS: Collaboration[] = [
@@ -258,4 +277,3 @@ export const NAV_ITEMS: NavItem[] = [
     { href: '#/about', label: 'About' },
     { href: '#/contact', label: 'Contact' },
 ]
-
