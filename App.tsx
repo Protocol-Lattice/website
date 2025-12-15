@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import ConsultancyPage from './pages/ConsultancyPage';
 import { CommandPalette } from './components/ui/CommandPalette';
 
 // A helper component to scroll to top on route change
@@ -23,18 +24,19 @@ function ScrollToTop() {
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="protocol-lattice-theme">
-        <HashRouter>
-          <ScrollToTop />
-          <Layout>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-            </Routes>
-          </Layout>
-          <CommandPalette />
-        </HashRouter>
+      <HashRouter>
+        <ScrollToTop />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/consultancy" element={<ConsultancyPage />} />
+          </Routes>
+        </Layout>
+        <CommandPalette />
+      </HashRouter>
     </ThemeProvider>
   );
 }

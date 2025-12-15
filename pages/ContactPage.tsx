@@ -1,42 +1,121 @@
-
 import React from 'react';
 import { COMPANY_INFO, SOCIAL_LINKS } from '../constants';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
-import Button from '../components/ui/Button';
 import { Icons } from '../components/Icons';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 
 function ContactPage() {
     const [isCopied, copy] = useCopyToClipboard();
 
     return (
-        <div className="container mx-auto flex min-h-[70vh] max-w-xl items-center justify-center px-4 py-16 sm:py-24">
-            <Card className="w-full">
-                <CardHeader className="text-center">
-                    <CardTitle className="text-3xl">Get In Touch</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col items-center gap-8">
-                    <p className="text-center text-muted-foreground">
-                        {COMPANY_INFO.availability}
-                    </p>
-                    
-                    <div className="flex w-full flex-col gap-4 sm:flex-row">
-                        <div className="flex-1 rounded-md border bg-secondary/50 p-3 text-center font-mono text-sm sm:text-base">
-                            {COMPANY_INFO.email}
+        <div className="gradient-bg min-h-screen">
+            <div className="container mx-auto flex min-h-[70vh] max-w-2xl items-center justify-center px-4 py-16 sm:py-24">
+                <div className="w-full animate-fade-in-up">
+                    {/* Header */}
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-2xl"
+                            style={{
+                                background: 'linear-gradient(135deg, hsla(160, 84%, 39%, 0.15) 0%, hsla(192, 91%, 50%, 0.1) 100%)',
+                                border: '1px solid hsla(160, 84%, 39%, 0.2)'
+                            }}
+                        >
+                            <Icons.mail className="w-8 h-8" style={{ color: 'hsl(160, 84%, 50%)' }} />
                         </div>
-                        <Button onClick={() => copy(COMPANY_INFO.email)} className="w-full sm:w-auto">
-                            {isCopied ? <Icons.check className="mr-2 h-4 w-4" /> : <Icons.copy className="mr-2 h-4 w-4" />}
-                            {isCopied ? 'Copied!' : 'Copy Email'}
-                        </Button>
+
+                        <h1 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+                            <span className="gradient-text">Get In Touch</span>
+                        </h1>
+
+                        <p className="text-lg" style={{ color: 'hsl(var(--color-text-secondary))' }}>
+                            {COMPANY_INFO.availability}
+                        </p>
                     </div>
 
-                    <div className="flex items-center space-x-6">
-                        <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground transition-colors hover:text-foreground">
-                            <Icons.github className="h-6 w-6" />
-                        </a>
+                    {/* Contact Card */}
+                    <div className="card" style={{ padding: 'var(--spacing-2xl)' }}>
+                        {/* Email Section */}
+                        <div className="mb-8">
+                            <label className="block text-sm font-medium mb-3" style={{ color: 'hsl(var(--color-text-muted))' }}>
+                                Email
+                            </label>
+                            <div className="flex flex-col sm:flex-row gap-3">
+                                <div
+                                    className="flex-1 flex items-center justify-center rounded-lg font-mono text-sm py-4 px-4"
+                                    style={{
+                                        background: 'hsl(var(--color-bg-primary))',
+                                        border: '1px solid hsl(var(--color-border-subtle))',
+                                        color: 'hsl(var(--color-accent-emerald))'
+                                    }}
+                                >
+                                    {COMPANY_INFO.email}
+                                </div>
+                                <button
+                                    onClick={() => copy(COMPANY_INFO.email)}
+                                    className="btn btn-primary"
+                                    style={{ minWidth: '140px' }}
+                                >
+                                    {isCopied ? (
+                                        <>
+                                            <Icons.check className="w-4 h-4" />
+                                            Copied!
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Icons.copy className="w-4 h-4" />
+                                            Copy Email
+                                        </>
+                                    )}
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="divider" style={{ margin: 'var(--spacing-xl) 0' }} />
+
+                        {/* Social Links */}
+                        <div>
+                            <label className="block text-sm font-medium mb-4" style={{ color: 'hsl(var(--color-text-muted))' }}>
+                                Find us online
+                            </label>
+                            <div className="flex flex-wrap gap-3">
+                                <a
+                                    href={SOCIAL_LINKS.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-secondary flex-1 sm:flex-initial"
+                                >
+                                    <Icons.github className="w-5 h-5" />
+                                    GitHub
+                                </a>
+                                <a
+                                    href={SOCIAL_LINKS.utcpWebsite}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-secondary flex-1 sm:flex-initial"
+                                >
+                                    <Icons.utcp className="w-5 h-5" />
+                                    UTCP
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </CardContent>
-            </Card>
+
+                    {/* Additional Info */}
+                    <div className="mt-8 text-center">
+                        <p className="text-sm" style={{ color: 'hsl(var(--color-text-muted))' }}>
+                            Want to contribute to our projects?{' '}
+                            <a
+                                href="https://github.com/protocol-lattice"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-medium transition-colors"
+                                style={{ color: 'hsl(var(--color-accent-emerald))' }}
+                            >
+                                Check out our GitHub →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
