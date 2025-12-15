@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectCard from '../components/ProjectCard';
+import ProductCard from '../components/ProductCard';
 import { PROJECTS, COMPANY_INFO, STATS, FEATURES, COLLABORATIONS, FAQS } from '../constants';
 import { Icons } from '../components/Icons';
 
@@ -60,10 +60,10 @@ function HomePage() {
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-            <a href="#/projects">
-              <button className="btn btn-primary" style={{ fontSize: '1rem', padding: '1rem 2rem' }}>
-                <Icons.code className="w-5 h-5" />
-                View Projects
+            <a href="#/products">
+              <button className="btn btn-primary" style={{ fontSize: '1rem', padding: '1rem 2rem', background: 'linear-gradient(135deg, #9B59B6 0%, #3498DB 100%)' }}>
+                <Icons.zap className="w-5 h-5" />
+                View Products
               </button>
             </a>
             <a href="https://github.com/protocol-lattice" target="_blank" rel="noopener noreferrer">
@@ -117,27 +117,27 @@ function HomePage() {
       {/* Divider */}
       <div className="divider container mx-auto max-w-4xl" />
 
-      {/* Featured Projects */}
+      {/* Featured Products - The Guild Style */}
       <section className="container mx-auto max-w-6xl px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4" style={{ fontFamily: 'var(--font-display)' }}>
-            <span className="gradient-text">Featured Projects</span>
+            <span className="gradient-text-alt">Featured Products</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--color-text-secondary))' }}>
             Production-ready tools built with care and maintained with passion.
           </p>
         </div>
 
-        <div className="grid-cards">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.name} project={project} />
+            <ProductCard key={project.name} product={project} index={index} />
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <a href="#/projects">
-            <button className="btn btn-secondary">
-              View All Projects
+          <a href="#/products">
+            <button className="btn btn-secondary" style={{ borderColor: 'hsla(280, 80%, 60%, 0.4)' }}>
+              View All Products
               <Icons.arrowRight className="w-4 h-4" />
             </button>
           </a>

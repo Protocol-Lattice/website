@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeProvider';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
-import ProjectsPage from './pages/ProjectsPage';
+import ProductsPage from './pages/ProductsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ConsultancyPage from './pages/ConsultancyPage';
@@ -29,7 +29,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/projects" element={<Navigate to="/products" replace />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/consultancy" element={<ConsultancyPage />} />

@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'grpc_graphql_gateway',
     displayName: 'gRPC GraphQL Gateway',
-    description: 'A protoc plugin that generates GraphQL execution code from Protocol Buffers. Features Apollo Federation v2, subscriptions, file uploads, and production-ready capabilities.',
+    description: 'Generate GraphQL APIs from Protocol Buffers with Federation v2 and subscriptions.',
     repoUrl: 'https://github.com/Protocol-Lattice/grpc_graphql_gateway',
     websiteUrl: 'https://protocol-lattice.github.io/grpc_graphql_gateway/',
     tags: ['Rust', 'GraphQL', 'gRPC', 'Protobuf', 'Federation'],
@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'rs-utcp',
     displayName: 'rs-utcp',
-    description: 'Official Rust implementation of the Universal Tool Calling Protocol. Supports 12 communication protocols including HTTP, MCP, WebSocket, gRPC, and WebRTC.',
+    description: 'Rust SDK for UTCP supporting 12 protocols including HTTP, MCP, and gRPC.',
     repoUrl: 'https://github.com/universal-tool-calling-protocol/rs-utcp',
     websiteUrl: 'https://utcp.io',
     tags: ['Rust', 'UTCP', 'AI', 'Tools', 'Protocols'],
@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'go-utcp',
     displayName: 'go-utcp',
-    description: 'Official Go implementation of the Universal Tool Calling Protocol. Built-in transports for HTTP, CLI, SSE, GraphQL, MCP, and UDP.',
+    description: 'Go SDK for UTCP with HTTP, CLI, SSE, GraphQL, and MCP transports.',
     repoUrl: 'https://github.com/universal-tool-calling-protocol/go-utcp',
     websiteUrl: 'https://utcp.io',
     tags: ['Go', 'UTCP', 'AI', 'Tools', 'Protocols'],
@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'go-agent',
     displayName: 'go-agent',
-    description: 'A powerful agent framework for Go with graph-aware memory, native UTCP tools, and multi-agent orchestration. Production-ready.',
+    description: 'Agent framework for Go with graph-aware memory and UTCP tools.',
     repoUrl: 'https://github.com/protocol-lattice/go-agent',
     tags: ['Go', 'AI', 'Agents', 'Framework'],
     isFeatured: true,
@@ -127,29 +127,46 @@ export const PROJECTS: Project[] = [
   {
     name: 'thunder',
     displayName: 'Thunder',
-    description: 'High-performance API gateway supporting gRPC, GraphQL, and REST. Unified interface for microservices.',
+    description: 'Go framework that transforms gRPC into REST and GraphQL APIs.',
     repoUrl: 'https://github.com/Protocol-Lattice/thunder',
-    tags: ['Go', 'gRPC', 'GraphQL', 'REST', 'Gateway'],
-    isFeatured: false,
+    tags: ['Go', 'gRPC', 'GraphQL', 'REST', 'Kubernetes'],
+    isFeatured: true,
+    quickstart: 'go get github.com/Protocol-Lattice/thunder',
     content: {
-      problem: 'Managing multiple API protocols across microservices is complex and error-prone.',
-      solution: 'Thunder provides a unified gateway that speaks gRPC, GraphQL, and REST natively.',
+      problem: 'Building APIs that support gRPC, REST, and GraphQL requires managing multiple frameworks and configurations.',
+      solution: 'Thunder automatically exposes gRPC services as REST and GraphQL endpoints with zero configuration.',
       features: [
-        'Multi-protocol support',
-        'High throughput',
-        'Easy configuration',
+        'gRPC + REST (gRPC-Gateway) auto-generation',
+        'GraphQL support for gRPC services',
+        'Prisma integration for databases',
+        'Kubernetes ready with TLS security',
+        'Built-in zap structured logging',
+        'Rate limiting & authentication middleware',
+        'Thunder CLI for scaffolding',
       ],
     },
   },
   {
     name: 'GoEventBus',
     displayName: 'GoEventBus',
-    description: 'Lightweight event bus for Go enabling decoupled, asynchronous communication between components.',
+    description: 'Lock-free event bus for Go with sub-microsecond latency.',
     repoUrl: 'https://github.com/Protocol-Lattice/GoEventBus',
-    tags: ['Go', 'Events', 'PubSub'],
-    isFeatured: false,
+    tags: ['Go', 'Events', 'Lock-Free', 'High-Performance'],
+    isFeatured: true,
     quickstart: 'go get github.com/Protocol-Lattice/GoEventBus',
-    content: {} as any,
+    content: {
+      problem: 'Channels can bottleneck and external message brokers add latency, complexity, and operational overhead.',
+      solution: 'GoEventBus provides in-process, lock-free event dispatching with atomic ring buffers for Go-speed communication.',
+      features: [
+        'Lock-free ring buffer with atomics',
+        'Sub-microsecond event dispatch',
+        'Context-aware handlers',
+        'Back-pressure policies (Drop/Block/Error)',
+        'Sync or async processing toggle',
+        'Built-in metrics and observability',
+        'Zero external dependencies',
+      ],
+    },
   },
   {
     name: 'memory-bank-mcp',
@@ -223,7 +240,7 @@ export const FAQS = [
 ];
 
 export const NAV_ITEMS: NavItem[] = [
-  { href: '#/projects', label: 'Projects' },
+  { href: '#/products', label: 'Products' },
   { href: '#/consultancy', label: 'Consultancy' },
   { href: '#/about', label: 'About' },
   { href: '#/contact', label: 'Contact' },
